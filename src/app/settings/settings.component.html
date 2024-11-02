@@ -1,0 +1,75 @@
+<div class="container mt-5 ku-settings-container">
+  <h2 class="ku-title-text text-center mb-4">ตั้งค่าบัญชีผู้ใช้</h2>
+  <form [formGroup]="settingsForm" (ngSubmit)="saveSettings()">
+    <div class="row">
+      <!-- คำนำหน้า -->
+      <div class="col-md-6 mb-4">
+        <div class="form-floating">
+          <select id="prefix" class="form-control" formControlName="prefix">
+            <option value="">เลือกคำนำหน้า</option>
+            <option value="นาย">นาย</option>
+            <option value="นาง">นาง</option>
+            <option value="นางสาว">นางสาว</option>
+          </select>
+          <label for="prefix">คำนำหน้า</label>
+        </div>
+      </div>
+
+      <!-- ชื่อ -->
+      <div class="col-md-6 mb-4">
+        <div class="form-floating">
+          <input id="name" type="text" class="form-control" formControlName="name" placeholder="ชื่อ">
+          <label for="name">ชื่อ</label>
+        </div>
+      </div>
+
+      <!-- นามสกุล -->
+      <div class="col-md-6 mb-4">
+        <div class="form-floating">
+          <input id="lastname" type="text" class="form-control" formControlName="lastname" placeholder="นามสกุล">
+          <label for="lastname">นามสกุล</label>
+        </div>
+      </div>
+
+      <!-- เบอร์โทรศัพท์ -->
+      <div class="col-md-6 mb-4">
+        <div class="form-floating">
+          <input id="phone" type="text" class="form-control" formControlName="phone" placeholder="เบอร์โทรศัพท์">
+          <label for="phone">เบอร์โทรศัพท์</label>
+        </div>
+      </div>
+
+      <!-- อีเมล -->
+      <div class="col-md-12 mb-4">
+        <div class="form-floating">
+          <input id="email" type="email" class="form-control" formControlName="email" placeholder="อีเมล">
+          <label for="email">อีเมล</label>
+        </div>
+      </div>
+
+      <!-- รหัสผ่านใหม่ -->
+      <div class="col-md-6 mb-4">
+        <div class="form-floating">
+          <input id="password" type="password" class="form-control" formControlName="new_password" placeholder="รหัสผ่านใหม่">
+          <label for="password">รหัสผ่านใหม่</label>
+        </div>
+      </div>
+
+      <!-- ยืนยันรหัสผ่าน -->
+      <div class="col-md-6 mb-4">
+        <div class="form-floating">
+          <input id="confirmPassword" type="password" class="form-control" formControlName="confirm_password" placeholder="ยืนยันรหัสผ่าน">
+          <label for="confirmPassword">ยืนยันรหัสผ่าน</label>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" 
+          class="btn ku-btn-primary w-50" 
+          [disabled]="!settingsForm.valid">
+          บันทึกข้อมูล
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

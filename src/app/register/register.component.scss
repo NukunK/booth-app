@@ -1,0 +1,45 @@
+.ku-register-bg {
+    background: linear-gradient(to bottom right, #e0f7e0, #ffffff);
+    padding: 20px;
+  }
+  
+  .custom-width {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .ku-border {
+    border: 2px solid #006400;
+  }
+  
+  .ku-title-text {
+    color: #006400;
+    font-weight: bold;
+  }
+  
+  .form-floating label {
+    color: #6c757d;
+  }
+  
+  .ku-link {
+    color: #006400;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .ku-link:hover {
+    color: #228b22;
+    text-decoration: underline;
+  }
+  
+  .ku-btn-primary {
+    background-color: #228b22;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ku-btn-primary:hover {
+    background-color: #006400;
+  }

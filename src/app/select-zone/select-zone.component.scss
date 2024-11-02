@@ -1,0 +1,31 @@
+.ku-zone-container {
+    background-color: #f0fff0; /* สีเขียวอ่อน */
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .ku-title-text {
+    color: #006400; /* สีเขียว KU */
+    font-weight: bold;
+  }
+  
+  .ku-card {
+    border: 2px solid #228b22; /* เส้นขอบสีเขียว */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ku-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ku-card-title {
+    color: #006400; /* สีเขียวเข้ม */
+    font-weight: bold;
+  }
+  
+  .ku-card-text {
+    color: #555; /* สีเทาเข้มเพื่อให้ตัวอักษรชัดเจน */
+  }
+  

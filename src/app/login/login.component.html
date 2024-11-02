@@ -1,0 +1,45 @@
+<div class="d-flex justify-content-center align-items-center vh-100 ku-login-bg">
+  <div class="custom-width bg-light border rounded shadow p-4 ku-border">
+    <div class="text-center mb-4">
+      <h2 class="ku-title-text">ยินดีต้อนรับ</h2>
+      <p class="ku-subtitle-text">เข้าสู่เว็บไซต์จองบูธงานเกษตรแฟร์</p>
+    </div>
+
+    <!-- ฟอร์มเข้าสู่ระบบ -->
+    <form (ngSubmit)="onLogin()">
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="name@example.com"
+          required
+        />
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <label for="password">Password</label>
+      </div>
+
+      <div class="text-center">
+        <div *ngIf="errorMessage" class="alert alert-danger mb-3" role="alert">
+          {{ errorMessage }}
+        </div>
+        <button type="submit" class="btn ku-btn-primary w-100 mb-2">เข้าสู่ระบบ</button>
+        <button class="btn ku-btn-secondary w-100" (click)="navigateToRegister()">สมัครสมาชิก</button>
+      </div>
+    </form>
+  </div>
+</div>

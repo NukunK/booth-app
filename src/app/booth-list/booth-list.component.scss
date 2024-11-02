@@ -1,0 +1,54 @@
+.ku-booth-container {
+  background-color: #f0fff0; /* สีเขียวอ่อน */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ku-title-text {
+  color: #006400; /* สีเขียวเข้ม */
+  font-weight: bold;
+}
+
+.booth-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ku-table-header {
+  background-color: #228b22; /* สีเขียวเข้ม */
+  color: #ffffff;
+
+  th {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+.ku-table-row {
+  transition: background-color 0.3s ease;
+
+  td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  &:nth-child(even) {
+    background-color: #f9f9f9; /* สีพื้นหลังอ่อนสลับ */
+  }
+
+  &:hover {
+    background-color: #e0f7e0; /* สีเขียวอ่อนเมื่อชี้เมาส์ */
+  }
+}
+
+.ku-no-data-text {
+  color: #006400;
+  font-size: 1.2rem;
+}
+
+.ku-error-message {
+  color: #ff0000; /* สีแดงเพื่อบ่งบอกว่ามีข้อผิดพลาด */
+  font-weight: bold;
+  margin-top: 20px;
+}

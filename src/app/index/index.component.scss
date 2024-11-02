@@ -1,0 +1,39 @@
+.ku-theme-bg {
+  background-color: #006400; /* สีเขียว KU */
+  border-color: #004b23; /* สีเขียวเข้มสำหรับขอบ */
+}
+
+.ku-detail-box {
+  background-color: #ffffff;
+  border-color: #c4c4c4;
+}
+
+.custom-width-index {
+  max-width: 400px;
+}
+
+.custom-hr {
+  border: 2px solid #ffffff; /* สีขาวสำหรับธีมสีเข้ม */
+  width: 80%;
+}
+
+.custom-hr-light {
+  border: 1px solid #c4c4c4; /* เส้นแบ่งสำหรับธีมสีขาว */
+}
+
+.ku-btn {
+  background-color: #228b22; /* สีเขียวสำหรับปุ่ม */
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.ku-btn:hover {
+  background-color: #006400; /* สีเข้มขึ้นเมื่อชี้ที่ปุ่ม */
+}
+
+.ku-theme-bg h2,
+.ku-theme-bg h4,
+.ku-theme-bg h5 {
+  color: #ffffff; /* ทำให้ข้อความเป็นสีขาวเพื่อให้อ่านง่าย */
+}

@@ -1,0 +1,82 @@
+.ku-booth-detail-container {
+  background-color: #f0fff0; /* สีเขียวอ่อน */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ku-title-text {
+  color: #006400; /* สีเขียวเข้ม */
+  font-weight: bold;
+}
+
+.ku-card-detail {
+  border: 2px solid #228b22; /* เส้นขอบสีเขียวเข้ม */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.ku-card-img {
+  border-radius: 15px 15px 0 0;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.ku-card-title {
+  color: #006400; /* สีเขียวเข้ม */
+  font-weight: bold;
+}
+
+.ku-card-text {
+  color: #555; /* สีเทาเข้มเพื่อให้ตัวอักษรชัดเจน */
+}
+
+.ku-qrcode-img {
+  margin-top: 15px;
+  border: 2px solid #228b22;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.ku-upload-container {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ku-label-text {
+  color: #006400;
+  font-weight: bold;
+}
+
+.ku-btn-primary {
+  background-color: #228b22; /* สีเขียว */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #006400; /* สีเขียวเข้ม */
+  }
+}
+
+.ku-btn-secondary {
+  background-color: hsl(0, 100%, 93%);
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #be0000;
+    color: #ffffff;
+  }
+}

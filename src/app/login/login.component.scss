@@ -1,0 +1,63 @@
+.ku-login-bg {
+  background: linear-gradient(to bottom right, #e0f7e0, #ffffff);
+  padding: 20px;
+}
+
+.custom-width {
+  max-width: 420px;
+  width: 100%;
+}
+
+.ku-border {
+  border: 2px solid #006400;
+}
+
+.ku-title-text {
+  color: #006400;
+  font-weight: bold;
+}
+
+.ku-subtitle-text {
+  color: #228b22;
+  font-size: 1rem;
+}
+
+.form-floating label {
+  color: #6c757d;
+}
+
+.ku-link {
+  color: #006400;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ku-link:hover {
+  color: #228b22;
+  text-decoration: underline;
+}
+
+.ku-btn-primary {
+  background-color: #228b22;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.ku-btn-primary:hover {
+  background-color: #006400;
+}
+
+.ku-btn-secondary {
+  background-color: #ffffff;
+  color: #006400;
+  border: 2px solid #006400;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ku-btn-secondary:hover {
+  background-color: #006400;
+  color: #ffffff;
+}

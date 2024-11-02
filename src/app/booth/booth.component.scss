@@ -1,0 +1,58 @@
+.ku-booth-container {
+    background-color: #f0fff0; /* สีเขียวอ่อน */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ku-title-text {
+    color: #006400; /* สีเขียวเข้ม */
+    font-weight: bold;
+  }
+  
+  .ku-card {
+    border: 2px solid #228b22; /* สีเขียวเข้ม */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ku-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ku-card-img {
+    max-height: 180px;
+    object-fit: cover;
+  }
+  
+  .ku-card-title {
+    color: #006400; /* สีเขียวเข้ม */
+    font-weight: bold;
+  }
+  
+  .ku-card-text {
+    color: #555; /* สีเทาเข้มเพื่อให้ตัวอักษรชัดเจน */
+  }
+  
+  .ku-modal-header {
+    background-color: #228b22; /* สีเขียว */
+    color: #ffffff;
+  }
+  
+  .ku-modal-body {
+    color: #333; /* สีเทาเข้มเพื่อความชัดเจน */
+  }
+  
+  .ku-btn-primary {
+    background-color: #228b22;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ku-btn-primary:hover {
+    background-color: #006400;
+  }
+  
