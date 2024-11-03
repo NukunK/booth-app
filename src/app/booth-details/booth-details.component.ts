@@ -16,12 +16,30 @@ export class BoothDetailsComponent implements OnInit {
   errorMessage: string = '';
   paymentImage: File | null = null;
   bookingId: string | null = null;
+  payment_due_date: string | null = null;
 
   constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router) {}
-
+  
+  getStatusInThai(status: string): string {
+    switch (status) {
+      case 'pending':
+        return 'รอดำเนินการ';
+      case 'confirmed':
+        return 'ยืนยันแล้ว';
+      case 'expired':
+        return 'หมดอายุ';
+      case 'pending_payment':
+        return 'รอการชำระเงิน';
+      case 'cancelled':
+        return 'ยกเลิกแล้ว';
+      default:
+        return 'ไม่ทราบสถานะ';
+    }
+  }
   ngOnInit(): void {
     const boothId = this.route.snapshot.queryParamMap.get('id');
-    this.bookingId = this.route.snapshot.queryParamMap.get('booking_id'); 
+    this.bookingId = this.route.snapshot.queryParamMap.get('booking_id');
+    this.payment_due_date = this.route.snapshot.queryParamMap.get('payment_due_date'); 
     this.getBoothDetails(boothId);
   }
 
@@ -50,7 +68,21 @@ export class BoothDetailsComponent implements OnInit {
     this.paymentImage = event.target.files[0];
   }
 
+  isPaymentAllowed(): boolean {
+    if (!this.payment_due_date) return false;
+
+    const dueDate = new Date(this.payment_due_date);
+    const currentDate = new Date();
+    
+    return currentDate <= dueDate;
+  }
+
   uploadPaymentImage(): void {
+    if (!this.isPaymentAllowed()) {
+      this.errorMessage = 'วันครบกำหนดชำระเงินหมดอายุแล้ว ไม่สามารถชำระเงินได้';
+      return;
+    }
+
     if (!this.paymentImage) {
       this.errorMessage = 'โปรดเลือกไฟล์ภาพก่อนอัปโหลด';
       return;
@@ -59,6 +91,9 @@ export class BoothDetailsComponent implements OnInit {
     const formData = new FormData();
     formData.append('payment_slip', this.paymentImage);
     formData.append('booking_id', this.bookingId!);
+
+    
+
 
     this.http.post<any>('https://wag19.bowlab.net/update_payment.php', formData).subscribe(
       (response) => {

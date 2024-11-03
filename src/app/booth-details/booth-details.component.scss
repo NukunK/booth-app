@@ -38,11 +38,14 @@
 }
 
 .ku-qrcode-img {
+  width: 150px; /* ปรับขนาดตามที่ต้องการ */
+  height: auto; /* รักษาอัตราส่วนของรูปภาพ */
   margin-top: 15px;
-  border: 2px solid #228b22;
-  border-radius: 10px;
-  padding: 5px;
+  border: 2px solid #228b22; /* ขอบสีเขียว */
+  border-radius: 10px; /* มุมโค้ง */
+  padding: 5px; /* ระยะห่างภายใน */
 }
+
 
 .ku-upload-container {
   background-color: #ffffff;
