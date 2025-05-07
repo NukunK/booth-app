@@ -81,16 +81,4 @@ export class RegisterComponent {
     this.router.navigate(['/login']);
   }
 }
-  // this.http.post('https://wag10.bowlab.net/register.php', this.registerData).subscribe({
-  //   next: (response) => {
-  //     console.log('ลงทะเบียนสำเร็จ:', response);
-  //     this.errorMessage = '';
-  //     window.alert('สมัครสมาชิกสำเร็จ');
-  //     this.router.navigate(['/login']);
-  //   },
-  //   error: (error: HttpErrorResponse) => {
-  //     console.error('เกิดข้อผิดพลาด:', error);
-  //     this.errorMessage = error.error?.message || 'การลงทะเบียนล้มเหลว กรุณาลองใหม่อีกครั้ง';
-  //   }
-  // });
   
