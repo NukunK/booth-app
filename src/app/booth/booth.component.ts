@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { NgIf, NgFor, CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // เพิ่ม FormsModule
 
@@ -11,7 +11,7 @@ declare var bootstrap: any;
   templateUrl: './booth.component.html',
   styleUrls: ['./booth.component.scss'],
   standalone: true,
-  imports: [CommonModule, NgIf, NgFor, FormsModule] // เพิ่ม FormsModule ใน imports
+  imports: [CommonModule, NgIf, NgFor, FormsModule, HttpClientModule] // เพิ่ม FormsModule ใน imports
 })
 export class BoothComponent implements OnInit {
   booths: any[] = [];
@@ -40,7 +40,7 @@ export class BoothComponent implements OnInit {
 
   // ฟังก์ชันสำหรับดึงข้อมูลบูธตาม zone_id
   getBoothsByZone(zoneId: string): void {
-    const apiUrl = 'https://wag19.bowlab.net/s_booth_by_zone_id.php'; 
+    const apiUrl = 'https://wag10.bowlab.net/s_booth_by_zone_id.php'; 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     this.http.post<any>(apiUrl, { zone_id: zoneId }, { headers }).subscribe(
@@ -89,7 +89,7 @@ export class BoothComponent implements OnInit {
       details: this.details // ใช้ค่า details จาก input
     };
 
-    const apiUrl = 'https://wag19.bowlab.net/bookings.php';
+    const apiUrl = 'https://wag10.bowlab.net/bookings.php';
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     this.http.post<any>(apiUrl, payload, { headers }).subscribe(

@@ -11,7 +11,7 @@
 }
 
 .ku-card-detail {
-  border: 2px solid #228b22; /* เส้นขอบสีเขียวเข้ม */
+  border: 2px solid #10b9b3d2; /* เส้นขอบสีเขียวเข้ม */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -39,7 +39,7 @@
 
 .ku-qrcode-img {
   margin-top: 15px;
-  border: 2px solid #228b22;
+  border: 2px solid #10b9b3d2;
   border-radius: 10px;
   padding: 5px;
 }
@@ -52,19 +52,19 @@
 }
 
 .ku-label-text {
-  color: #006400;
+  color: #0b928dd2;
   font-weight: bold;
 }
 
 .ku-btn-primary {
-  background-color: #228b22; /* สีเขียว */
+  background-color: #10b9b3d2; /* สีเขียว */
   color: #ffffff;
   border: none;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #006400; /* สีเขียวเข้ม */
+    background-color: #0b928dd2; /* สีเขียวเข้ม */
   }
 }
 

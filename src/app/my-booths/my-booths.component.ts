@@ -39,7 +39,7 @@ getUserBookings(userId: string): void {
   const payload = { user_id: userId };
   const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-  this.http.post<any>('https://wag19.bowlab.net/get_booking_by_user_id.php', payload, { headers }).subscribe(
+  this.http.post<any>('https://wag10.bowlab.net/get_booking_by_user_id.php', payload, { headers }).subscribe(
     (response) => {
       console.log('Response:', response);
       if (response.status === 'success') {

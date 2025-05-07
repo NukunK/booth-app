@@ -33,7 +33,7 @@ export class RegisterComponent {
     }
   
     // ส่งข้อมูลไปที่ backend
-    this.http.post('https://wag19.bowlab.net/register.php', this.registerData).subscribe({
+    this.http.post('https://wag10.bowlab.net/register.php', this.registerData).subscribe({
       next: (response) => {
         console.log('ลงทะเบียนสำเร็จ:', response);
         this.errorMessage = '';

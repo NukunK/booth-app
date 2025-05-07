@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule, RouterOutlet } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './booth-details.component.html',
   styleUrls: ['./booth-details.component.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, RouterModule, RouterOutlet]
 })
 export class BoothDetailsComponent implements OnInit {
   booth: any = null;
@@ -31,7 +31,7 @@ export class BoothDetailsComponent implements OnInit {
     const payload = { booth_id: boothId };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post<any>('https://wag19.bowlab.net/s_booth_by_id.php', payload, { headers }).subscribe(
+    this.http.post<any>('https://wag10.bowlab.net/s_booth_by_id.php', payload, { headers }).subscribe(
       (response) => {
         if (response.status === 'success') {
           this.booth = response.booth;
@@ -60,7 +60,7 @@ export class BoothDetailsComponent implements OnInit {
     formData.append('payment_slip', this.paymentImage);
     formData.append('booking_id', this.bookingId!);
 
-    this.http.post<any>('https://wag19.bowlab.net/update_payment.php', formData).subscribe(
+    this.http.post<any>('https://wag10.bowlab.net/update_payment.php', formData).subscribe(
       (response) => {
         if (response.status === 'success') {
           alert('อัปโหลดภาพการชำระเงินสำเร็จ');
@@ -86,7 +86,7 @@ export class BoothDetailsComponent implements OnInit {
       booking_id: this.bookingId
     };
 
-    this.http.post<any>('https://wag19.bowlab.net/update_booking.php', payload).subscribe(
+    this.http.post<any>('https://wag10.bowlab.net/update_booking.php', payload).subscribe(
       (response) => {
         if (response.status === 'success') {
           alert('ยกเลิกการจองสำเร็จ');
