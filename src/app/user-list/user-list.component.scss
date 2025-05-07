@@ -1,0 +1,43 @@
+/* สีธีม KU */
+$ku-green: #0b928dd2; /* เขียวสด KU */
+$ku-dark-green: #107d79d2; /* เขียวเข้ม */
+$ku-light-green: #f0f9f0; /* เขียวอ่อน */
+$ku-white: #ffffff; /* สีขาว */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text-ku-green {
+  color: $ku-green;
+}
+
+.list-group-item {
+  background-color: $ku-green; /* พื้นหลังเขียว */
+  color: $ku-white; /* ตัวอักษรสีขาว */
+  border: none;
+  padding: 1.2rem;
+  cursor: pointer;
+  margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างลิสต์ */
+  border-radius: 8px; /* ขอบมน */
+}
+
+/* ปุ่มสำหรับสลับลูกศร */
+.arrow {
+  font-size: 1.2rem;
+  color: $ku-white; /* สีขาวสำหรับลูกศร */
+}
+
+/* รายละเอียดสมาชิก */
+.details {
+  background-color: $ku-light-green;
+  color: $ku-dark-green; /* ใช้สีเขียวเข้มสำหรับข้อความรายละเอียด */
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Hover effect */
+.list-item-ku:hover {
+  background-color: darken($ku-green, 10%);
+}
