@@ -7,7 +7,10 @@
       <div class="card ku-card h-100 text-center" (click)="viewBooth(zone.id)">
         <div class="card-body">
           <h5 class="card-title ku-card-title">{{ zone.zone_name }}</h5> <!-- แสดง zone_name -->
+          <h5 class="card-title ku-card-title">รหัสโซน : {{ zone.id }}</h5> <!-- แสดง zone_name -->
           <p class="card-text ku-card-text">{{ zone.zone_description }}</p> <!-- แสดง zone_description -->
+          <p class="card-text ku-card-text">จำนวนบูธ : {{ zone.num_booths }}</p> <!-- แสดง zone_description -->
+
         </div>
       </div>
     </div>

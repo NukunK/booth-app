@@ -22,7 +22,7 @@ export class SelectZoneComponent implements OnInit {
 
   // ฟังก์ชันดึงข้อมูล Zone จาก API
   getZones(): void {
-    this.http.get<any>('https://wag19.bowlab.net/get_zone.php').subscribe(
+    this.http.get<any>('https://wag10.bowlab.net/get_zone.php').subscribe(
       (data) => {
         console.log('Received data:', data); // แสดงข้อมูลเพื่อดีบัก
         if (data.status === 'success' && Array.isArray(data.zones)) {
