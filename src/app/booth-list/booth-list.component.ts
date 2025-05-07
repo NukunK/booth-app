@@ -13,7 +13,7 @@ import { NgIf, NgFor } from '@angular/common';
 export class BoothListComponent implements OnInit {
   booths: any[] = [];
   errorMessage: string = '';
-  private apiUrl = 'https://wag19.bowlab.net/get_booth.php'; // เปลี่ยนเป็น URL ของ API
+  private apiUrl = 'https://wag10.bowlab.net/get_booth.php'; // เปลี่ยนเป็น URL ของ API
 
   constructor(private http: HttpClient) {}
 
@@ -22,7 +22,7 @@ export class BoothListComponent implements OnInit {
   }
 
   getBooths(): void {
-    this.http.get<any>('https://wag19.bowlab.net/get_booth.php').subscribe(
+    this.http.get<any>('https://wag10.bowlab.net/get_booth.php').subscribe(
       (data) => {
         console.log('Received data:', data); // แสดงข้อมูลที่ได้รับใน Console
   
