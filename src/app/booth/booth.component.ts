@@ -37,6 +37,27 @@ export class BoothComponent implements OnInit {
       }
     });
   }
+  getStatusInThai(status: string): string {
+    switch (status) {
+      case 'pending':
+        return 'รอดำเนินการ';
+      case 'confirmed':
+        return 'ยืนยันแล้ว';
+      case 'expired':
+        return 'หมดอายุ';
+      case 'pending_payment':
+        return 'รอการชำระเงิน';
+      case 'cancelled':
+        return 'ยกเลิกแล้ว';
+      case 'available':
+        return 'ว่าง';
+      case 'booked':
+        return 'ถูกจองแล้ว';
+      default:
+        return 'ไม่ทราบสถานะ';
+    }
+  }
+  
 
   // ฟังก์ชันสำหรับดึงข้อมูลบูธตาม zone_id
   getBoothsByZone(zoneId: string): void {

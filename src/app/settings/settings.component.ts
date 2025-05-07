@@ -85,6 +85,20 @@ export class SettingsComponent implements OnInit {
       this.http.post<any>(apiUrl, payload, { headers }).subscribe(
         (response) => {
           if (response.status === 'success') {
+            // ล้างข้อมูลเดิมใน localStorage
+            localStorage.removeItem('prefix');
+            localStorage.removeItem('userName');
+            localStorage.removeItem('userLastName');
+            localStorage.removeItem('phone');
+            localStorage.removeItem('email');
+            
+            // เพิ่มข้อมูลใหม่เข้าไปใน localStorage
+            localStorage.setItem('prefix', this.settingsForm.value.prefix);
+            localStorage.setItem('userName', this.settingsForm.value.name);
+            localStorage.setItem('userLastName', this.settingsForm.value.lastname);
+            localStorage.setItem('phone', this.settingsForm.value.phone);
+            localStorage.setItem('email', this.settingsForm.value.email);
+
             alert('บันทึกข้อมูลสำเร็จ');
             this.router.navigate(['/dashboard']);
           } else {

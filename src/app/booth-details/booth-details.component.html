@@ -10,12 +10,14 @@
     <div class="card-body">
       <h5 class="card-title ku-card-title">ราคา: {{ booth.price | currency:'THB' }}</h5>
       <p class="card-text ku-card-text">ขนาด: {{ booth.booth_size }} เมตร</p>
-      <p class="card-text ku-card-text">สถานะ: {{ booth.status }}</p>
       <p class="card-text ku-card-text">รหัสการจอง: {{ bookingId }}</p>
 
       <!-- QR Code จำลอง -->
       <div class="text-center mt-4">
-        <img src="https://via.placeholder.com/150?text=QR+Code" alt="QR Code" class="ku-qrcode-img">
+        
+        <img src="https://1.bp.blogspot.com/-dHN4KiD3dsU/XRxU5JRV7DI/AAAAAAAAAz4/u1ynpCMIuKwZMA642dHEoXFVKuHQbJvwgCEwYBhgL/s1600/qr-code.png" alt="QR Code" class="ku-qrcode-img">
+        <br />
+        <p class="card-text ku-card-text">โปรดชำระเงินภายในวันที่: {{ payment_due_date }}</p>
       </div>
 
       <!-- ฟอร์มอัปโหลดภาพ -->

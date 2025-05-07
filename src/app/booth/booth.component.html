@@ -14,7 +14,7 @@
         <div class="card-body">
           <h5 class="card-title ku-card-title">{{ booth.booth_name }}</h5>
           <p class="card-text ku-card-text">ขนาด: {{ booth.booth_size }}</p>
-          <p class="card-text ku-card-text">สถานะ: {{ booth.status }}</p>
+          <p class="card-text ku-card-text">สถานะ: {{ getStatusInThai(booth.status) }}</p>
           <p class="card-text ku-card-text">ราคา: {{ booth.price | currency:'THB' }}</p>
         </div>
       </div>
