@@ -1,0 +1,45 @@
+/* KU Theme Colors */
+$ku-green:  #0b928dd2;;
+$ku-light-green: #10b9b3d2;
+$ku-dark:  #08504dd4;;
+$text-white: #ffffff;
+
+.text-ku-green {
+    color: $ku-green;
+}
+
+.btn-ku-primary {
+    background-color: $ku-green;
+    border: none;
+    color: $text-white;
+}
+
+.bg-ku-dark {
+    background-color: $ku-dark;
+    color: $text-white;
+}
+
+.bg-ku-light {
+    background-color: $ku-light-green;
+    color: $text-white;
+}
+
+.list-group-item {
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.card-ku {
+    background-color: $ku-light-green;
+    color: $text-white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card-ku-header {
+    background-color: $ku-green;
+    color: $text-white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
